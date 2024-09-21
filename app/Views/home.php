@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="container-fluid mt-4 justify-content-center">
                                     <div class="d-flex flex-row justify-content-center">
-                                        <a class="fs-6 text-white text-center" href="<?php echo site_url() . "register" ?>">
+                                        <a class="fs-6 text-white text-center" href="<?php echo base_url() . "lyncxus/public" . $registerpath ?>">
                                             Not Registered?
                                         </a>
                                     </div>

@@ -7,16 +7,18 @@ class Home extends BaseController
     
 
     public function __construct() {
-        $this->data['registerpath'] = "/register";
     }
 
     public function index(): string
     {
-        return view('home', $this->data);
+        return view('home');
     }
 
-    public function register(): string
+
+    public function send() 
     {
-        return view('register');
+        $number = $this->request->getPost('number');
+        $msg    = $this->request->getPost('msg');
     }
+    
 }

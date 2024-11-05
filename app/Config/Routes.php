@@ -9,4 +9,4 @@ use CodeIgniter\Router\RouteCollection;
 
 
 $routes->get('/', 'Home::index');
-$routes->get('/register', 'Home::register');
+$routes->post('/send', 'Home::register');

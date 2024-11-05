@@ -47,61 +47,57 @@
 
 <body class="bg-dark">
 
-    <div class="container-fluid mt-12 px-5">
-        <div class="row">
-            <div class="col">
-                <div class="row">
-                    <div class="col-8 ">
-                        <form action="POST">
-                            <div class="container-fluid pt-5 pb-4 mx-5 bg-secondary rounded shadow border-dark">
-                                <p class="h1 text-white text-center mb-5"> Welcome To Lyncxus Online</p>
-                                <p class="h2 text-white text-center mb-2">Sign In</p>
-                                <div class="d-flex flex-column px-3 mt-2">
-                                    <label for="name" class="form-label text-white">Username</label>
-                                    <input type="text" id="name" class="form-control">
-
-                                    <label for="password" class="form-label text-white">Password</label>
-                                    <input type="password" id="password" class="form-control">
-                                    <div class="row d-flex flex-row justify-content-center mt-3">
-                                        <div class="col-2">
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="container-fluid mt-4 justify-content-center">
-                                    <div class="d-flex flex-row justify-content-center">
-                                        <a class="fs-6 text-white text-center" href="<?php echo base_url() . "lyncxus/public" . $registerpath ?>">
-                                            Not Registered?
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </form>
 
 
-                    </div>
-
-
-                </div>
-
-            </div>
-            <div class="col">
-
-            </div>
-        </div>
-    </div>
-
-    <!-- <div class="container-fluid mt-10">
+    <div class="container-fluid mt-5">
         <div class="d-flex flex-column justify-content-center py-5">
             <h1 class="h1 text-white text-center my-5">Welcome To Lyncxus Online</h1>
-            <h1 class="h5 text-white text-center mt-5">Website is currently in development</h1>
-            <h1 class="h5 text-white text-center">If you have an idea on what to put here please email me at lydianjayarpilleda@gmail.com</h1>
+            <h1 class="h5 text-white text-center mt-5">A free sms API developed by: LydianJay</h1>
+            <h1 class="h5 text-white text-center mt-5">How to use?</h1>
+            <p class="p5 text-white text-center mt-5">You send a post request containing the number (name = 'number') and message (name='msg') to send to this url address: https://lyncxus.online/send</p>
+            <div class="container border border-white d-flex flex-row justify-content-center px-0">
+                <pre>
+                    <code class="text-white text-center">
+                        $ch = curl_init();
+
+                        // Set the URL for the POST request
+                        curl_setopt($ch, CURLOPT_URL, "https://lyncxus.online/send");
+
+                        // Enable the POST option
+                        curl_setopt($ch, CURLOPT_POST, 1);
+
+                        // Specify the POST data
+                        $postData = [
+                        'number' => '+63912345678',
+                        'msg' => 'Hellow world',
+                        ];
+                        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
+
+                        // Set options to return the response as a string
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+                        // Execute the POST request
+                        $response = curl_exec($ch);
+
+                        // Check for errors
+                        if (curl_errno($ch)) {
+                        echo 'Error:' . curl_error($ch);
+                        }
+
+                        // Close the cURL session
+                        curl_close($ch);
+
+                        // Print the response
+                        echo $response;
+
+
+                    </code>
+                </pre>
+            </div>
+
             <h1 class="h5 text-white text-center mt-5">Yow wassup - LydianJay</h1>
-            <h1 class="h5 text-white text-center">Tisaaasii!!! - SammyBoy</h1>
         </div>
-    </div> -->
+    </div>
 </body>
 
 </html>

@@ -9,18 +9,21 @@
 # to override the setting, you must un-comment it by removing the '#'
 # at the beginning of the line.
 #--------------------------------------------------------------------
-
+#--------------------------------------------------------------------
+# ESP32 GSM Module Config
+#--------------------------------------------------------------------
+GSM_SERVER = 192.168.254.166
 #--------------------------------------------------------------------
 # ENVIRONMENT
 #--------------------------------------------------------------------
 
-# CI_ENVIRONMENT = production
+CI_ENVIRONMENT = development
 
 #--------------------------------------------------------------------
 # APP
 #--------------------------------------------------------------------
 
-# app.baseURL = ''
+app.baseURL = 'http://localhost/lyncxus/public'
 # If you have trouble with `.`, you could also use `_`.
 # app_baseURL = ''
 # app.forceGlobalSecureRequests = false

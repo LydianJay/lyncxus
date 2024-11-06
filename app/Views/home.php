@@ -95,7 +95,9 @@
                 </pre>
             </div>
 
-            <h1 class="h5 text-white text-center mt-5">Yow wassup - LydianJay</h1>
+            <h1 class="h5 text-white text-center mt-5">
+                <a href="<?php echo base_url() . 'test'?>">Try Message a ph number</a>
+            </h1>
         </div>
     </div>
 </body>
